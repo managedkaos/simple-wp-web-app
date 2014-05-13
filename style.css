@@ -1,0 +1,11 @@
+/*
+Theme Name: Simple WordPress Web App Theme
+Theme URI : http://managedkaos.com
+Description : Basic theme for building a web app with WordPress as the backend.  Based on Twitter Bootstrap.
+Version : 1
+Author : Managed Kaos
+Author URI : http://managedkaos.com
+*/
+
+@import url('css/bootstrap.min.css');
+
