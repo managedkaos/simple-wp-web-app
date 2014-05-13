@@ -38,24 +38,28 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?php echo site_url(); ?>"><?php bloginfo( 'name' ); ?></a>
+                    <a class="navbar-brand" href="<?php echo site_url(); ?>"><?php bloginfo('name'); ?></a>
                 </div>
-                <center>
-                    <div class="navbar-collapse collapse" id="navbar-main">
-                        <ul class="nav navbar-nav">
-                        </ul>
-                        <form class="navbar-form navbar-right" role="search">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="username" placeholder="Username">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="password" placeholder="Password">
-                            </div>
-                            <button type="submit" class="btn btn-default">Sign In</button>
-                            <button type="submit" class="btn btn-info">Register</button>
-                        </form>
-                    </div>
-                </center>
+                <div class="navbar-collapse collapse" id="navbar-main">
+                    <?php
+                    if (has_nav_menu('simple-web-app-menu')) {
+                        wp_nav_menu(array(
+                            'theme_location' => 'simple-web-app-menu',
+                            'menu_class' => 'nav navbar-nav',
+                        ));
+                    }
+                    ?>
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="username" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="password" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-default">Sign In</button>
+                        <button type="submit" class="btn btn-info">Register</button>
+                    </form>
+                </div>
             </div>
         </div>
 
