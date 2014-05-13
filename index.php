@@ -12,6 +12,9 @@
 
 <div class="container">
     <div class="row">
+
+    </div>
+    <div class="row">
         <div class="col-lg-4">
             <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('simple-web-app-homepage-left')) : else : ?>
                 <h2>Home Page Left</h2>
