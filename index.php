@@ -66,10 +66,8 @@ if (!is_user_logged_in()) {
         <!-- End Center Row -->
     </div>
     <!-- End Main Container -->
-<?php } else { ?>
-    <div style="margin-top: 60px;">
-        hi
-    </div>
-<?php } ?>
+<?php } else { 
+     require 'webapp.php';
+}?>
 
 <?php get_footer(); ?>

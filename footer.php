@@ -7,6 +7,7 @@
                 </div>
                 <div class="col-lg-4 text-center">
                     <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('simple-web-app-footer-center')) : else : ?>
+                    &nbsp;
                     <?php endif; ?>
                 </div>
                 <div class="col-lg-4">

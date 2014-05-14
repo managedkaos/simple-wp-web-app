@@ -27,7 +27,7 @@
     <body>
 
         <!-- Fixed navbar -->
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="margin-bottom:10px">
             <div class="container">
                 <div class="navbar-header">
                     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
@@ -61,8 +61,9 @@
                                     <li><a href="#">Update Profile</a></li>
                                     <li class="divider"></li>
                                     <li><?php wp_loginout(home_url(), 'true'); ?></li>
+                                    <li><a href="<?php echo site_url('wp-admin', 'admin') ?>">Admin Console</a></li>
                                 </ul>
-                            </div>                             | 
+                            </div>
                         </div>
                     <?php } else { ?>
                         <form name="login-form" role="form" class="navbar-form navbar-right" action="<?php echo site_url('wp-login.php', 'login') ?>" method="post">
