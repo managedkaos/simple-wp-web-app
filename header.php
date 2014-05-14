@@ -13,9 +13,6 @@
         <!-- Bootstrap core CSS -->
         <link href="<?php bloginfo('stylesheet_url') ?>" rel="stylesheet">
 
-        <!-- Custom styles for this template -->
-        <link href="navbar-fixed-top.css" rel="stylesheet">
-
         <!-- Just for debugging purposes. Don't actually copy this line! -->
         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -40,25 +37,45 @@
                     </button>
                     <a class="navbar-brand" href="<?php echo site_url(); ?>"><?php bloginfo('name'); ?></a>
                 </div>
-                <div class="navbar-collapse collapse" id="navbar-main">
+                <div class="collapse navbar-collapse navHeaderCollapse" id="navbar-main">
                     <?php
                     if (has_nav_menu('simple-web-app-menu')) {
                         wp_nav_menu(array(
                             'theme_location' => 'simple-web-app-menu',
-                            'menu_class' => 'nav navbar-nav',
+                            'menu_class' => 'nav navbar-nav navbar-right',
                         ));
                     }
-                    ?>
-                    <form class="navbar-form navbar-right" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="username" placeholder="Username">
+                    if (is_user_logged_in()) {
+                        global $current_user;
+                        get_currentuserinfo();
+                        ?>
+                        <div class="navbar-text navbar-right">
+                            <!-- Split button -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-info btn-sm"><?php echo ucfirst($current_user->display_name); ?></button>
+                                <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Update Profile</a></li>
+                                    <li class="divider"></li>
+                                    <li><?php wp_loginout(home_url(), 'true'); ?></li>
+                                </ul>
+                            </div>                             | 
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="password" placeholder="Password">
-                        </div>
-                        <button type="submit" class="btn btn-default">Sign In</button>
-                        <button type="submit" class="btn btn-info">Register</button>
-                    </form>
+                    <?php } else { ?>
+                        <form name="login-form" role="form" class="navbar-form navbar-right" action="<?php echo site_url('wp-login.php', 'login') ?>" method="post">
+                            <div class="form-group input-group-sm">
+                                <input type="text" class="form-control" name="log" placeholder="Username">
+                            </div>
+                            <div class="form-group input-group-sm">
+                                <input type="password" class="form-control" name="pwd" placeholder="Password">
+                            </div>
+                            <input type="hidden" name="redirect_to" value="<?php echo home_url(); ?>" />
+                            <button type="submit" name ="wp-submit" id="wp-submit" class="btn btn-default btn-sm">Sign In</button>
+                        </form>
+                    <?php } ?>
                 </div>
             </div>
         </div>
