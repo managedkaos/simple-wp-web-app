@@ -42,7 +42,7 @@
                     if (has_nav_menu('simple-web-app-menu')) {
                         wp_nav_menu(array(
                             'theme_location' => 'simple-web-app-menu',
-                            'menu_class' => 'nav navbar-nav navbar-right',
+                            'menu_class' => 'nav navbar-nav',
                         ));
                     }
                     if (is_user_logged_in()) {
