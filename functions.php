@@ -14,6 +14,17 @@ if (function_exists('register_sidebar')) {
         'after_title' => '</h1>'
     ));
 
+    // Call to Action
+    register_sidebar(array(
+        'name' => 'Simple Web App Call to Action',
+        'id' => 'simple-web-app-call-to-action',
+        'description' => 'Widget for the call to action.',
+        'before_widget' => '<div id="%1$s" class="%2$s panel-title panel-heading">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>'
+    ));
+
     // Home page left
     register_sidebar(array(
         'name' => 'Simple Web App Homepage Left',
@@ -41,6 +52,17 @@ if (function_exists('register_sidebar')) {
         'name' => 'Simple Web App Homepage Right',
         'id' => 'simple-web-app-homepage-Right',
         'description' => 'Widget for the home page right column.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="text-center">',
+        'after_title' => '</h2>'
+    ));
+
+    // Footer
+    register_sidebar(array(
+        'name' => 'Simple Web App Footer',
+        'id' => 'simple-web-app-footer',
+        'description' => 'Widget for the footer.',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="text-center">',
