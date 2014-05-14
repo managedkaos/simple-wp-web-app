@@ -10,7 +10,7 @@ if (function_exists('register_sidebar')) {
         'description' => 'Widget for the home page jumbotron.',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
-        'before_title' => '<h1>',
+        'before_title' => '<h1 class="text-center">',
         'after_title' => '</h1>'
     ));
 
@@ -21,7 +21,7 @@ if (function_exists('register_sidebar')) {
         'description' => 'Widget for the home page left column.',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
-        'before_title' => '<h2>',
+        'before_title' => '<h2 class="text-center">',
         'after_title' => '</h2>'
     ));
 
@@ -32,7 +32,7 @@ if (function_exists('register_sidebar')) {
         'description' => 'Widget for the home page center column.',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
-        'before_title' => '<h2>',
+        'before_title' => '<h2 class="text-center">',
         'after_title' => '</h2>'
     ));
 
@@ -43,7 +43,7 @@ if (function_exists('register_sidebar')) {
         'description' => 'Widget for the home page right column.',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
-        'before_title' => '<h2>',
+        'before_title' => '<h2 class="text-center">',
         'after_title' => '</h2>'
     ));
 } // End Register widget areas for the home page
@@ -53,4 +53,6 @@ function register_simple_web_app_menu() {
   register_nav_menu('simple-web-app-menu',__( 'Home Page Menu' ));
 }
 add_action( 'init', 'register_simple_web_app_menu' );
+
+
 ?>
