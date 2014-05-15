@@ -18,20 +18,21 @@ if (!is_user_logged_in()) {
     <!-- Call to Action Panel -->
     <div class="container text-center">
         <div class="panel panel-success">
-            <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('simple-web-app-call-to-action')) : else : ?>
+            <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('simple-web-app-call-to-action-heading')) : else : ?>
                 <div class="panel-title panel-heading">
                     <h2>Call to Action</h2>
                     <p>Add a text widget to Simple Web App Call to Action to fill in this area.  The widget title becomes the call to action title and the content appears here.</p>
                 </div>
             <?php endif; ?>
             <div class="panel-body">
-                <a class="btn btn-success btn-lg" href="#" role="button">Register! &raquo;</a>
+                <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('simple-web-app-call-to-action-body')) : else : ?>
+                    <a class="btn btn-success btn-lg" href="#" role="button">Register! &raquo;</a>
+                <?php endif; ?>
             </div>
         </div>
     </div>
     <!-- Call to Action Panel -->
 
-    <!-- Main Container -->
     <div class="container">    
         <!-- Center Row -->
         <div class="row">
@@ -65,9 +66,11 @@ if (!is_user_logged_in()) {
         </div>
         <!-- End Center Row -->
     </div>
-    <!-- End Main Container -->
-<?php } else { 
-     require 'webapp.php';
-}?>
+
+<?php
+} else {
+    require 'webapp.php';
+}
+?>
 
 <?php get_footer(); ?>

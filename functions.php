@@ -14,12 +14,23 @@ if (function_exists('register_sidebar')) {
         'after_title' => '</h1>'
     ));
 
-    // Call to Action
+    // Call to Action Heading
     register_sidebar(array(
-        'name' => 'Call to Action',
-        'id' => 'simple-web-app-call-to-action',
+        'name' => 'Call to Action Heading',
+        'id' => 'simple-web-app-call-to-action-heading',
         'description' => 'Widget for the call to action.',
         'before_widget' => '<div id="%1$s" class="%2$s panel-title panel-heading">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>'
+    ));
+
+    // Call to Action Body
+    register_sidebar(array(
+        'name' => 'Call to Action Body',
+        'id' => 'simple-web-app-call-to-action-body',
+        'description' => 'Widget for the call to action.',
+        'before_widget' => '<div id="%1$s" class="%2$s panel-body">',
         'after_widget' => '</div>',
         'before_title' => '<h2>',
         'after_title' => '</h2>'
