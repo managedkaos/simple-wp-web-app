@@ -37,7 +37,9 @@ if (!is_user_logged_in()) {
         <div class="row">
             <div class="col-lg-4">
                 <div class="text-center">
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/check1.png" style="width: 140px; height: 140px;">
+                    <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('simple-web-app-homepage-left-icon')) : else : ?>
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/check1.png" style="width: 140px; height: 140px;">                
+                    <?php endif; ?>
                 </div>
                 <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('simple-web-app-homepage-left')) : else : ?>
                     <h2 class="text-center">Home Page Left</h2>
@@ -46,7 +48,9 @@ if (!is_user_logged_in()) {
             </div>
             <div class="col-lg-4">
                 <div class="text-center">
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/person3.png" style="width: 140px; height: 140px;">
+                    <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('simple-web-app-homepage-center-icon')) : else : ?>
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/person3.png" style="width: 140px; height: 140px;">
+                    <?php endif; ?>
                 </div>
                 <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('simple-web-app-homepage-center')) : else : ?>
                     <h2 class="text-center">Home Page Center</h2>
@@ -55,7 +59,9 @@ if (!is_user_logged_in()) {
             </div>
             <div class="col-lg-4">
                 <div class="text-center">
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/services1.png" style="width: 140px; height: 140px;">
+                    <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('simple-web-app-homepage-right-icon')) : else : ?>
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/services1.png" style="width: 140px; height: 140px;">
+                    <?php endif; ?>
                 </div>
                 <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('simple-web-app-homepage-right')) : else : ?>
                     <h2 class="text-center">Home Page Right</h2>
@@ -66,8 +72,10 @@ if (!is_user_logged_in()) {
         <!-- End Center Row -->
     </div>
     <!-- End Main Container -->
-<?php } else { 
-     require 'webapp.php';
-}?>
+    <?php
+} else {
+    require 'webapp.php';
+}
+?>
 
 <?php get_footer(); ?>

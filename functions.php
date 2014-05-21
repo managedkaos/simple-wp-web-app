@@ -27,6 +27,16 @@ if (function_exists('register_sidebar')) {
 
     // Home page left
     register_sidebar(array(
+        'name' => 'Homepage Left Icon',
+        'id' => 'simple-web-app-homepage-left-icon',
+        'description' => 'Widget for the home page left icon.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="text-center">',
+        'after_title' => '</h2>'
+    ));
+
+    register_sidebar(array(
         'name' => 'Homepage Left',
         'id' => 'simple-web-app-homepage-left',
         'description' => 'Widget for the home page left column.',
@@ -38,6 +48,16 @@ if (function_exists('register_sidebar')) {
 
     // Home page center
     register_sidebar(array(
+        'name' => 'Homepage Center Icon',
+        'id' => 'simple-web-app-homepage-center-icon',
+        'description' => 'Widget for the home page center icon.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="text-center">',
+        'after_title' => '</h2>'
+    ));
+
+    register_sidebar(array(
         'name' => 'Homepage Center',
         'id' => 'simple-web-app-homepage-center',
         'description' => 'Widget for the home page center column.',
@@ -48,6 +68,16 @@ if (function_exists('register_sidebar')) {
     ));
 
     // Home page right
+    register_sidebar(array(
+        'name' => 'Homepage Right Icon',
+        'id' => 'simple-web-app-homepage-right-icon',
+        'description' => 'Widget for the home page right icon.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="text-center">',
+        'after_title' => '</h2>'
+    ));
+
     register_sidebar(array(
         'name' => 'Homepage Right',
         'id' => 'simple-web-app-homepage-Right',
