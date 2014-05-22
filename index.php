@@ -9,7 +9,7 @@ if (!is_user_logged_in()) {
             <h1>Simple WP Web App</h1>
             <p>Add a text widget to Simple Web App Jumbotron to fill in this area.  The widget title becomes the Jumbotron headline and the content appears here.
             </p>
-            <a class="btn btn-default" href="<?php echo site_url(); ?>/wp-admin/widgets.php" role="button">Let's Get Started! &raquo;</a>
+            <a class="btn btn-info" href="<?php echo site_url(); ?>/wp-admin/widgets.php" role="button">Let's Get Started! &raquo;</a>
         </div>
     <?php endif; ?>
     </div>
