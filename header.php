@@ -61,7 +61,11 @@
                                     <li><a href="#">Update Profile</a></li>
                                     <li class="divider"></li>
                                     <li><?php wp_loginout(home_url(), 'true'); ?></li>
+                                    
+                                    <!-- check to see if the current user is an admin.  if they are, display a link to the admin panel -->
+                                    <?php if ( current_user_can('administrator') ) { ?>
                                     <li><a href="<?php echo site_url('wp-admin', 'admin') ?>">Admin Console</a></li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                         </div>
