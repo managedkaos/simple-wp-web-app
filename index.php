@@ -7,9 +7,9 @@ if (!is_user_logged_in()) {
     <div class="jumbotron text-center" style="margin-top: 60px;" id="simple-web-app-jumbotron">
         <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('simple-web-app-jumbotron')) : else : ?>
             <h1>Simple WP Web App</h1>
-            <p>Add a text widget to Simple Web App Jumbotron to fill in this area.  The widget title becomes the Jumbotron headline and the content appears here.
+            <p>Add a text widget to Jumbotron to fill in this area.  The widget title becomes the Jumbotron headline and the content appears here.
             </p>
-            <a class="btn btn-default" href="<?php echo site_url(); ?>/wp-admin/widgets.php" role="button">Let's Get Started! &raquo;</a>
+            <a class="btn btn-info" href="<?php echo site_url(); ?>/wp-admin/widgets.php" role="button">Let's Get Started! &raquo;</a>
         </div>
     <?php endif; ?>
     </div>
@@ -21,7 +21,7 @@ if (!is_user_logged_in()) {
             <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('simple-web-app-call-to-action')) : else : ?>
                 <div class="panel-title panel-heading">
                     <h2>Call to Action</h2>
-                    <p>Add a text widget to Simple Web App Call to Action to fill in this area.  The widget title becomes the call to action title and the content appears here.</p>
+                    <p>Add a text widget to Call to Action to fill in this area.  The widget title becomes the call to action title and the content appears here.</p>
                 </div>
             <?php endif; ?>
             <div class="panel-body">
@@ -43,7 +43,7 @@ if (!is_user_logged_in()) {
                 </div>
                 <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('simple-web-app-homepage-left')) : else : ?>
                     <h2 class="text-center">Home Page Left</h2>
-                    <p>Add a text widget to Simple Web App Homepage Left to fill in this area.  The widget title becomes the column title and the content appears here.</p>
+                    <p>Add a text widget to Homepage Left to fill in this area.  The widget title becomes the column title and the content appears here.</p>
                 <?php endif; ?>
             </div>
             <div class="col-lg-4">
@@ -54,7 +54,7 @@ if (!is_user_logged_in()) {
                 </div>
                 <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('simple-web-app-homepage-center')) : else : ?>
                     <h2 class="text-center">Home Page Center</h2>
-                    <p>Add a text widget to Simple Web App Homepage Center to fill in this area.  The widget title becomes the column title and the content appears here.</p>
+                    <p>Add a text widget to Homepage Center to fill in this area.  The widget title becomes the column title and the content appears here.</p>
                 <?php endif; ?>
             </div>
             <div class="col-lg-4">
@@ -65,7 +65,7 @@ if (!is_user_logged_in()) {
                 </div>
                 <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('simple-web-app-homepage-right')) : else : ?>
                     <h2 class="text-center">Home Page Right</h2>
-                    <p>Add a text widget to Simple Web App Homepage Right to fill in this area.  The widget title becomes the column title and the content appears here.</p>
+                    <p>Add a text widget to Homepage Right to fill in this area.  The widget title becomes the column title and the content appears here.</p>
                 <?php endif; ?>
             </div>
         </div>
