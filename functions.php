@@ -122,6 +122,7 @@ if (function_exists('register_sidebar')) {
     ));
 } // End Register widget areas for the home page
 // Register menu areas for the home page
+
 function register_simple_web_app_menu() {
     register_nav_menu('simple-web-app-menu', __('Home Page Menu'));
 }
@@ -146,4 +147,8 @@ function unregister_default_widgets() {
 }
 
 add_action('widgets_init', 'unregister_default_widgets', 11);
+
+// Disable the admin bar for all users
+show_admin_bar(false);
+
 ?>
